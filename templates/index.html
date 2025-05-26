@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block title %}Home{% endblock %}
+{% block body %}
+<div class="container mt-4">
+    <h2 class="text-center">Welcome to the Drinking Games!</h2>
+    <p class="text-center">Choose a game to play:</p>
+    <div class="col">
+        {% for game in games %}
+            <div class="col text-center">
+                <a href="{{ game.route }}" class="btn btn-warning">{{ game.name }}</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block title %}Coin Game{% endblock %}
+{% block body %}
+<div class="text-center">
+    <h1 class="fw-bold p-3">🪙 The Coin Game 🪙</h1>
+    <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseRules" role="button" aria-expanded="false" aria-controls="collapseExample">
+        Rules
+    </a>
+    <div class="row align-items-center justify-content-center collapse pt-3" id="collapseRules">
+        <div class="col-10">    
+            <ol class="list-group list-group-numbered">
+                <li class="list-group-item">Spin the coin</li>
+                <li class="list-group-item">While spinning, drink and drink and drink</li>
+                <li class="list-group-item">When the coin stops, guess head or tails</li>
+                <li class="list-group-item">If you guess correctly, its the next persons go</li>
+                <li class="list-group-item">If you guess incorrectly, you spin again!</li>
+                <li class="list-group-item">Keep going until you guess correctly</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="row align-items-center justify-content-center pt-3">
+        <div class="col p-3">
+            <button id="spin" class="btn btn-lg btn-warning" onclick="spinCoin()">Spin the Coin</button>
+            <p class="coinText" id="heads" hidden>Heads</p>
+            <img hidden id ="headsImage" src="static/heads.gif" alt="Coin" class="img-fluid" id="coin">
+            <p class="coinText" id="tails" hidden>Tails</p>
+            <img hidden id ="tailsImage" src="static/tails.gif" alt="Coin" class="img-fluid" id="coin">
+            <p class="coinText" id="spinning" hidden>Spinning...</p>
+            <img hidden id ="spinImage" src="static/gorilla.gif" alt="Coin" class="img-fluid" id="coin">
+        </div>
+    </div>
+</div>
+
+<script src="static/coinGame.js"></script>
+{% endblock %}
