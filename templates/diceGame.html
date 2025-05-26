@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block title %}Dice Game{% endblock %}
+{% block body %}
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col justify-content-center">
+            <h1 class="fw-bold p-3">🎲 The Dice Game 🎲</h1>
+            <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseRules" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Rules
+            </a>
+            <div class="col-6 mx-auto">
+                <div class="collapse" id="collapseRules">
+                    <ol class="list-group list-group-numbered pt-3">
+                        <li class="list-group-item">Pick a number</li>
+                        <li class="list-group-item">Roll the dice</li>
+                        <li class="list-group-item">If its your number, drink!</li>
+                    </ol>
+                </div>
+            </div>
+
+            <!-- Main game content -->
+             <p id="dice" class="pt-3">🎲</p>
+             <img src="static/roll-dice.gif" alt="Dice" class="img-fluid pt-3" id="diceRolling" hidden>
+             <p id="result" hidden>test</p>
+             <!-- <img src="static/diceResult/1.png" alt="Dice" class="img-fluid pt-3" id="diceResult" hidden> -->
+        </div>
+    </div>
+</div>
+    
+<script src="static/diceGame.js"></script>
+
+{% endblock %}

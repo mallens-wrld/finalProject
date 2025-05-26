@@ -7,7 +7,8 @@
     <div class="col">
         {% for game in games %}
             <div class="col text-center">
-                <a href="{{ game.route }}" class="btn btn-warning">{{ game.name }}</a>
+                <a href="{{ game.route }}" class="btn btn-warning game-btn">{{ game.name }}</a>
+                <p class="text-muted description">{{ game.description }}</p>
             </div>
         {% endfor %}
     </div>

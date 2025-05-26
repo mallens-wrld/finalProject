@@ -12,5 +12,36 @@ a {
     
 }
 
+ol > li {
+    font-weight: bold;
+}
 
+#diceRolling {
+    max-width: 250px;
+}
+
+#dice {
+    font-size: 5rem;
+}
+
+#dice:hover {
+    cursor: pointer;
+}
+
+#result {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.game-btn {
+    width: 60%;
+    height: 50px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
 
